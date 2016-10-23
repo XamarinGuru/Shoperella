@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{82E3DBF8-E490-4E44-A183-E487004C822E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Shoperella</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)API\Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlaceAutocompleteAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlaceDetailsApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Deal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Vendor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Wish.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Offer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)API\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+  </ItemGroup>
+</Project>

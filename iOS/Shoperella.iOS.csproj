@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{EECE03C6-ADC6-4B79-B6D9-F5D44AF8A73B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Shoperella.iOS</RootNamespace>
+    <AssemblyName>Shoperella.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchTlsProvider>Legacy</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Erlend Frendsen (WRWTKQT7BG)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>false</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchSdkVersion>9.3</MtouchSdkVersion>
+    <CodesignProvision>7da9127f-38ef-4c3d-ba28-59791a1bc911</CodesignProvision>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchTlsProvider>Legacy</MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Xamarin.Facebook.iOS.4.12.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\portable-net45+wp80+win8+wpa81\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="SDWebImage">
+      <HintPath>..\packages\Xamarin.SDWebImage.3.7.5\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
+    </Reference>
+    <Reference Include="FlyoutNavigation">
+      <HintPath>..\Components\flyoutnavigation-1.5.1\lib\ios-unified\FlyoutNavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Vendor\" />
+    <Folder Include="User\" />
+    <Folder Include="Model\" />
+    <Folder Include="Model\User\" />
+    <Folder Include="Core\" />
+    <Folder Include="Model\Vendor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Navigation\NavHeader.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\Navigation.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Styles\Colors.cs" />
+    <Compile Include="Styles\HeaderStyleGenerator.cs" />
+    <Compile Include="VendorRegisterViewController.cs" />
+    <Compile Include="VendorRegisterViewController.designer.cs">
+      <DependentUpon>VendorRegisterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\NavHeaderView.cs" />
+    <Compile Include="Navigation\NavHeaderView.designer.cs">
+      <DependentUpon>NavHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\MultilineEntryElement.cs" />
+    <Compile Include="BaseViewController.cs" />
+    <Compile Include="BaseViewController.designer.cs">
+      <DependentUpon>BaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\DailyDealsViewController.cs" />
+    <Compile Include="User\DailyDealsViewController.designer.cs">
+      <DependentUpon>DailyDealsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User\DealsCell.cs" />
+    <Compile Include="Model\User\DealsCell.designer.cs">
+      <DependentUpon>DealsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\DealDetailViewController.cs" />
+    <Compile Include="User\DealDetailViewController.designer.cs">
+      <DependentUpon>DealDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\OffersViewController.cs" />
+    <Compile Include="User\OffersViewController.designer.cs">
+      <DependentUpon>OffersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FavoritesViewController.cs" />
+    <Compile Include="User\FavoritesViewController.designer.cs">
+      <DependentUpon>FavoritesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User\FavoriteSectionHeaderCell.cs" />
+    <Compile Include="Model\User\FavoriteSectionHeaderCell.designer.cs">
+      <DependentUpon>FavoriteSectionHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserProfileViewController.cs" />
+    <Compile Include="User\UserProfileViewController.designer.cs">
+      <DependentUpon>UserProfileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserProfileEditViewController.cs" />
+    <Compile Include="User\UserProfileEditViewController.designer.cs">
+      <DependentUpon>UserProfileEditViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationPickUpViewController.cs" />
+    <Compile Include="LocationPickUpViewController.designer.cs">
+      <DependentUpon>LocationPickUpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Core\LocationHelper.cs" />
+    <Compile Include="Vendor\CreateDealViewController.cs" />
+    <Compile Include="Vendor\CreateDealViewController.designer.cs">
+      <DependentUpon>CreateDealViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\HomeViewController.cs" />
+    <Compile Include="User\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User\HomeCell.cs" />
+    <Compile Include="Model\User\HomeCell.designer.cs">
+      <DependentUpon>HomeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\VendorHomeViewController.cs" />
+    <Compile Include="Vendor\VendorHomeViewController.designer.cs">
+      <DependentUpon>VendorHomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\InboxViewController.cs" />
+    <Compile Include="Vendor\InboxViewController.designer.cs">
+      <DependentUpon>InboxViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\OpenOffersViewController.cs" />
+    <Compile Include="Vendor\OpenOffersViewController.designer.cs">
+      <DependentUpon>OpenOffersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\VendorProfileViewController.cs" />
+    <Compile Include="Vendor\VendorProfileViewController.designer.cs">
+      <DependentUpon>VendorProfileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\VendorProfileEditViewController.cs" />
+    <Compile Include="Vendor\VendorProfileEditViewController.designer.cs">
+      <DependentUpon>VendorProfileEditViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vendor\WishesCell.cs" />
+    <Compile Include="Model\Vendor\WishesCell.designer.cs">
+      <DependentUpon>WishesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\CreateOfferViewController.cs" />
+    <Compile Include="Vendor\CreateOfferViewController.designer.cs">
+      <DependentUpon>CreateOfferViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vendor\OpenOffersCell.cs" />
+    <Compile Include="Model\Vendor\OpenOffersCell.designer.cs">
+      <DependentUpon>OpenOffersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User\OffersCell.cs" />
+    <Compile Include="Model\User\OffersCell.designer.cs">
+      <DependentUpon>OffersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HomeSectionHeaderCell.cs" />
+    <Compile Include="Model\HomeSectionHeaderCell.designer.cs">
+      <DependentUpon>HomeSectionHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vendor\VHWishesCell.cs" />
+    <Compile Include="Model\Vendor\VHWishesCell.designer.cs">
+      <DependentUpon>VHWishesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vendor\VHOpenOffersCell.cs" />
+    <Compile Include="Model\Vendor\VHOpenOffersCell.designer.cs">
+      <DependentUpon>VHOpenOffersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\CreateTemplateViewController.cs" />
+    <Compile Include="Vendor\CreateTemplateViewController.designer.cs">
+      <DependentUpon>CreateTemplateViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User\FavoriteCell.cs" />
+    <Compile Include="Model\User\FavoriteCell.designer.cs">
+      <DependentUpon>FavoriteCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\OfferDetailViewController.cs" />
+    <Compile Include="User\OfferDetailViewController.designer.cs">
+      <DependentUpon>OfferDetailViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="flyoutnavigation">
+      <Version>1.5.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebookios">
+      <Version>4.12.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.20</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sdwebimage">
+      <Version>3.7.5</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btn-menu.png" />
+    <BundleResource Include="Resources\logo_white.png" />
+    <BundleResource Include="Resources\NexaLight.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\NexaBold.otf" />
+    <BundleResource Include="Resources\justin.jpg" />
+    <BundleResource Include="Resources\header_logo.png" />
+    <BundleResource Include="Resources\logo_green.png" />
+    <BundleResource Include="Resources\splash_bg.jpg" />
+    <BundleResource Include="Resources\powered_by_google_on_white%403x.png" />
+    <BundleResource Include="Resources\icon_check.jpeg" />
+    <BundleResource Include="Resources\icon_check.png" />
+    <BundleResource Include="Resources\icon_circle.png" />
+    <BundleResource Include="Resources\icon_avatar.png" />
+    <BundleResource Include="Resources\icon_vendor.jpg" />
+  </ItemGroup>
+  <Import Project="..\Shoperella.projitems" Label="Shared" Condition="Exists('..\Shoperella.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
